@@ -1,5 +1,5 @@
 SECONDS=0 # builtin bash timer
-ZIPNAME="Devel Kernel $(date '+%Y%m%d-%H%M').zip"
+ZIPNAME="Kouki-Kernel-$(date '+%Y%m%d-%H%M').zip"
 TC_DIR="$HOME/workfolder/proton-clang"
 DEFCONFIG="vendor/RMX1911_defconfig"
 AK3_DIR="$HOME/workfolder/AnyKernel3"
