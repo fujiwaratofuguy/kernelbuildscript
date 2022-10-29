@@ -45,3 +45,4 @@ cd /$HOME/workfolder/kernelsource/out/arch/arm64/boot
 rm -rf Image.gz-dtb && rm -rf dtbo.img
 echo -e "\nCompleted in $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second(s) !"
 echo "Zip: $ZIPNAME"
+echo "Finally Your slow ass machine finished it"
