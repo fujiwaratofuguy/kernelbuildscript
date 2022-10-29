@@ -2,7 +2,7 @@ SECONDS=0 # builtin bash timer
 ZIPNAME="Kouki-Kernel-$(date '+%Y%m%d-%H%M').zip"
 TC_DIR="$HOME/workfolder/proton-clang"
 DEFCONFIG="vendor/RMX1911_defconfig"
-AK3_DIR="$HOME/workfolder/AnyKernel3"
+AK3_DIR="$HOME/workfolder/Ak3"
 
 export PATH="$TC_DIR/bin:$PATH"
 
@@ -33,13 +33,13 @@ if [ -f "out/arch/arm64/boot/Image.gz-dtb" ] && [ -f "out/arch/arm64/boot/dtbo.i
 echo -e "\nKernel compiled succesfully! Zipping up...\n"
 
 fi
-cp out/arch/arm64/boot/Image.gz-dtb /$HOME/workfolder/AnyKernel3
-cp out/arch/arm64/boot/dtbo.img /$HOME/workfolder/AnyKernel3
-cd /$HOME/workfolder/AnyKernel3
+cp out/arch/arm64/boot/Image.gz-dtb /$HOME/workfolder/Ak3
+cp out/arch/arm64/boot/dtbo.img /$HOME/workfolder/Ak3
+cd /$HOME/workfolder/Ak3
 rm -f *.zip
 zip -r9 "../$ZIPNAME" * -x '*.git*' README.md *placeholder
 echo -e "\n REMOVING Image.gz-dtb and dtbo.img in Anykernel folder\n"
-rm -rf /$HOME/workfolder/AnyKernel3/Image.gz-dtb && rm -rf /$HOME/workfolder/AnyKernel3/dtbo.img
+rm -rf /$HOME/workfolder/AnyKernel3/Image.gz-dtb && rm -rf /$HOME/workfolder/Ak3/dtbo.img
 echo -e "\n REMOVING Image.gz-dtb and dtbo.img in out folder\n"
 cd /$HOME/workfolder/kernelsource/out/arch/arm64/boot
 rm -rf Image.gz-dtb && rm -rf dtbo.img
